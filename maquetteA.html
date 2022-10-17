@@ -41,6 +41,20 @@
             }
         }
     </style>
+    <script type="text/javascript">
+        // Get url search params
+        var urlParams = new URLSearchParams(window.location.search);
+
+        // Extract the 'timeout' parameter
+        var timeout = urlParams.get('timeout');
+        if (timeout) {
+            // Wait for the timeout
+            setTimeout(function() {
+                // Redirect to the next page
+                window.location.href = "index.html";
+            }, timeout * 1000);
+        }
+    </script>
     <div class="svg-container">
         <svg width="100%" height="100%" viewBox="0 0 443 242" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
